@@ -1,0 +1,23 @@
+---
+- name: Demo CI-CD Devoops
+  hosts: gns3-hosts
+  gather_facts: false
+  connection: local
+
+  vars:
+    cli:
+      username: bala
+      password: bala
+
+  tasks:
+    - name: enable bgp
+      ios_config:
+        provider: "{{ cli }}"
+        authorize: yes
+        parents: router bgp 1
+        lines:
+          - network 0.0.0.0
+
+      register: print_output
+
+    -  debug: var=print_output
