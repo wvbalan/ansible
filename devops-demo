@@ -6,8 +6,8 @@
 
   vars:
     cli:
-      username: bala
-      password: bala
+      username: admin
+      password: admin
 
   tasks:
     - name: enable bgp
