@@ -16,7 +16,7 @@
         authorize: yes
         parents: router bgp 1
         lines:
-          - network 0.0.0.0
+          - network 10.0.0.0
 
       register: print_output
 
